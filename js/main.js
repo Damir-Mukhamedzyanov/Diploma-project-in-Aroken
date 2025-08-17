@@ -15,19 +15,36 @@
 
     // ==========================================================================
 
-    new Swiper('.swiper-wrapper', {
+    new Swiper('.airmax__swiper', {
         spaceBetween: 15,
         slidesPerView: 1,
 
         pagination: {
-            el: '.gallery__pagination',
-            type: 'fraction'
-        },
-        navigation: {
-            nextEl: '.swiper-button-prev ',
-            prevEl: '.swiper-button-next',
+            el: '.airmax__pagination'
         },
 
     });
 
+    new Swiper('.slider-up__swiper', {
+        spaceBetween: 30,
+        slidesPerView: 1,
+
+        navigation: {
+            nextEl: '.slider-up-next',
+            prevEl: '.slider-up-prev',
+        },
+
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+            },
+            1001: {
+                spaceBetween: 40,
+                slidesPerView: 3,
+            },
+            1201: {
+                slidesPerView: 4
+            }
+        }
+    });
 })()
